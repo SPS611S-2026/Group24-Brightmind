@@ -1,0 +1,23 @@
+{
+  "name": "sps-backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "prisma:generate": "prisma generate",
+    "prisma:studio": "prisma studio",
+    "prisma:db:pull": "prisma db pull",
+    "prisma:seed": "node prisma/seed.js",
+    "prisma:reset": "prisma migrate reset --force && npm run prisma:seed"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.12.0",
+    "@supabase/supabase-js": "^2.103.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "prisma": "^5.12.0"
+  }
+}
