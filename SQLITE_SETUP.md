@@ -37,7 +37,7 @@ npx prisma migrate reset
 - Delete the existing SQLite database (if any)
 - Create a new `prisma/dev.db` file
 - Apply all migrations
-- Seed the database (optional)
+- Run the seed script, which now leaves the database empty
 
 ### 4. Start the Backend Server
 ```bash
@@ -247,9 +247,9 @@ backend/
 
 1. ✅ Start backend: `npm run dev`
 2. ✅ Start frontend: `npm run dev` (in frontend folder)
-3. ✅ Register/Login as student or counsellor
-4. ✅ Test creating availability and appointments
-5. ✅ Verify data appears in calendar
+3. ✅ Register your own student, counsellor, or admin account
+4. ✅ Add availability, appointments, and resources through the app
+5. ✅ Verify data appears in calendar and dashboards
 6. ✅ Test urgent flag functionality
 
 ## Important Notes

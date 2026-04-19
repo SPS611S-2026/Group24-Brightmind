@@ -60,6 +60,12 @@ export default function ResourceLibrary({ context }: { context: ScreenContext })
           Search
         </button>
       </div>
+      {visibleResources.length === 0 && (
+        <div className={styles.emptyState}>
+          <h3>No resources yet</h3>
+          <p>Resources added by an administrator will appear here.</p>
+        </div>
+      )}
       <div className={styles.grid3}>
         {visibleResources.map(resource => (
           <article key={resource.id} className={styles.resourceCard} onClick={() => resource.url && window.open(resource.url, '_blank')}>

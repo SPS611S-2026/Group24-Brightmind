@@ -2,9 +2,8 @@ import prisma from '../services/prismaClient.js'
 
 export async function getAllProfiles(req, res) {
   try {
-    // Return only counselors
+    // Return all users so the admin table reflects newly created accounts.
     const users = await prisma.user.findMany({
-      where: { role: 'counsellor' },
       select: {
         id: true,
         name: true,

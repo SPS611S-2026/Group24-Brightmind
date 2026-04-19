@@ -64,13 +64,6 @@ export default function AuthPage({ mode, initialRole, authError, onSubmit, onSwi
             </label>
           )}
           {authError && <div className={styles.error}>{authError}</div>}
-          {mode === 'login' && (
-            <div style={{ padding: '12px', backgroundColor: '#f0f9ff', borderRadius: '6px', fontSize: '13px', marginBottom: '16px' }}>
-              <strong>📝 Demo Credentials:</strong>
-              <div>Student: stephen.indongo@nust.na / password123</div>
-              <div>Counsellor: maria.eriksson@nust.na / password123</div>
-            </div>
-          )}
 
           <label className={styles.field}>
             <span>Email</span>

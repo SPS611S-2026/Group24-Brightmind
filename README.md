@@ -44,7 +44,7 @@ npm run prisma:generate
 npm --workspace backend run prisma:reset
 ```
 
-This creates/resets the SQLite database and seeds test data.
+This creates/resets the SQLite database with no sample records.
 
 ## 5. Run the app
 

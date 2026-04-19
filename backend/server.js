@@ -25,6 +25,15 @@ app.use('/api/availability', availabilityRoutes)
 app.use('/api/profiles', profilesRoutes)
 
 const port = process.env.PORT || 4000
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Backend server running on http://localhost:${port}`)
+})
+
+server.on('error', (error) => {
+  if (error?.code === 'EADDRINUSE') {
+    console.error(`Port ${port} is already in use. Stop the existing backend process or set a different PORT in backend/.env.`)
+    process.exit(1)
+  }
+
+  throw error
 })
