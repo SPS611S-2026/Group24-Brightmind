@@ -84,3 +84,6 @@ npm --workspace backend run prisma:reset
 ```
 
 - If port 4000 is busy, change PORT in backend/.env.
+
+
+THIS WAS KINDA FUN
